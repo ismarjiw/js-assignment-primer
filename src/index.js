@@ -1,6 +1,6 @@
 export function calculateTotal (items, tax) {
   if (tax < 0) {
-    tax = Math.abs(tax);
+    tax = Math.abs(tax)
   }
 
   let total = 0
@@ -8,7 +8,7 @@ export function calculateTotal (items, tax) {
   for (let item of items) {
     if (item.taxable) {
       total += item.price
-      const taxedItem = item.price * tax;
+      const taxedItem = item.price * tax
       total += taxedItem
     } else {
       total += item.price
